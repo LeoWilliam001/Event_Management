@@ -1,11 +1,16 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 import ApplyForm from "@/components/applyForm";
 import CreateEventForm from "@/components/createEventForm";
 import Modal from "@/components/model";
+import useAuth from "@/hooks/useAuth";
 
 export default function EventsPage() {
+    useAuth(); 
+
+    const router = useRouter();
     const [events, setEvents] = useState([]);
     const [isFormVisible, setIsFormVisible] = useState(false);
     const [isCreateFormVisible, setIsCreateFormVisible] = useState(false);
@@ -81,10 +86,22 @@ export default function EventsPage() {
         setEvents([...events, newEvent]);
     };
 
+    const handleLogout = () => {
+        localStorage.removeItem('userId');
+        localStorage.removeItem('isGuest');
+        router.push('/auth/login');
+    };
+
     return (
         <div className="p-6">
             <h1 className="text-2xl text-white font-bold mb-4">Events</h1>
             {userId && <p className="mb-4 text-cyan-600">Your User ID: {userId}</p>}
+            <button 
+                className="mb-4 bg-red-500 text-white px-4 py-2 rounded"
+                onClick={handleLogout}
+            >
+                Logout
+            </button>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {events.map(event => (
                     <div key={event._id} className="p-4 border rounded shadow">

@@ -5,7 +5,7 @@ import Event from "@/models/eventModel";
 export async function DELETE(req, { params }) {
     await connectDB(); // Ensure DB is connected
 
-    const { eventId } = params;
+    const { eventId } = await params;
 
     try {
         await Event.findByIdAndDelete(eventId);
