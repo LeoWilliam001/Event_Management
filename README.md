@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Event Management Application  
 
-## Getting Started
+An **Event Management Application** built with [Next.js](https://nextjs.org), [React](https://reactjs.org), and [Tailwind CSS](https://tailwindcss.com). Users can create, view, apply for, and manage events with authentication-based access control.  
 
-First, run the development server:
+## 🚀 Features  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Authentication**: Secure login and signup using JWT authentication.  
+- **Event Creation**: Authenticated users can create and manage events.  
+- **Event Application**: Users can apply for events directly from the interface.  
+- **Event Deletion**: Event creators can delete their own events.  
+- **Responsive UI**: Fully optimized for all screen sizes.  
+- **Protected Routes**: Ensures secure access to event-related functionalities.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Getting Started  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### ✅ Prerequisites  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Node.js** (v14 or higher)  
+- **npm** or **yarn**  
 
-## Learn More
+### 📌 Installation  
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/your-username/event-management.git
+   cd event-management
+   ```  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:  
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Set up environment variables in `.env.local`:  
+   ```env
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   ```  
 
-## Deploy on Vercel
+4. Start the development server:  
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Open **[http://localhost:3000](http://localhost:3000)** in your browser.  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📡 Deployment  
+
+Deploy on **[Vercel](https://vercel.com)**:  
+
+1. Push the code to GitHub.  
+2. Go to [Vercel](https://vercel.com), create a project, and connect your repository.  
+3. Add environment variables in Vercel settings.  
+4. Deploy with one click.  
+
+## 📌 API Endpoints  
+
+### 🔹 Apply for an Event  
+**Endpoint:** `POST /api/events/apply`  
+
+**Request Body:**  
+```json
+{
+    "eventId": "event_id",
+    "userId": "user_id"
+}
+```  
+
+**Response:**  
+```json
+{
+    "message": "Application successful"
+}
+```  
+
+## 🔧 Usage  
+
+### 🔑 Authentication  
+
+- Uses **JWT tokens** stored in local storage.  
+- Protected routes ensure only logged-in users can access event management features.  
+
+### 📅 Event Management  
+
+- Users can **create**, **view**, and **apply** for events.  
+- The **event list** is dynamically fetched from the database.  
+
+## 📚 Learn More  
+
+- **[Next.js Docs](https://nextjs.org/docs)** – Learn about Next.js features.  
+- **[React Docs](https://reactjs.org/docs/getting-started.html)** – Learn React fundamentals.  
+- **[Tailwind CSS Docs](https://tailwindcss.com/docs/installation)** – Style efficiently with Tailwind.  
+
+## 🚀 Ready to Deploy?  
+
+Check out [Next.js Deployment Docs](https://nextjs.org/docs/app/building-your-application/deploying) for detailed deployment instructions.  
