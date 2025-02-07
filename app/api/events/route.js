@@ -3,7 +3,7 @@ import connectDB from "@/lib/db";
 import Event from "@/models/eventModel";
 
 export async function GET(req) {
-    await connectDB(); // Ensure DB is connected
+    await connectDB();
 
     try {
         const events = await Event.find();

@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import connectDB from "@/lib/db";
 
 export async function POST(req) {
-    await connectDB(); // Ensure DB is connected
+    await connectDB(); 
 
     try {
         const { email, password } = await req.json();

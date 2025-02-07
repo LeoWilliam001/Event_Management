@@ -2,10 +2,10 @@ import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import connectDB from "@/lib/db";
 import Event from "@/models/eventModel";
-import EventApplication from "@/models/eventFormModel"; // Assuming you have this model
+import EventApplication from "@/models/eventFormModel"; 
 
 export async function POST(req) {
-    await connectDB(); // Ensure DB is connected
+    await connectDB(); 
 
     try {
         const { eventId, userId, userName, userEmail, userPhone, userComment } = await req.json();

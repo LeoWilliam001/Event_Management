@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import connectDB from "@/lib/db";
-import EventApplication from "@/models/eventFormModel"; // Assuming you have this model
+import EventApplication from "@/models/eventFormModel"; 
 
 export async function GET(req) {
-    await connectDB(); // Ensure DB is connected
+    await connectDB(); 
 
     const userId = req.nextUrl.searchParams.get("userId");
 

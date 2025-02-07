@@ -3,7 +3,7 @@ import connectDB from "@/lib/db";
 import Event from "@/models/eventModel";
 
 export async function POST(req) {
-    await connectDB(); // Ensure DB is connected
+    await connectDB(); 
 
     try {
         const { name, description, date, createdBy } = await req.json();

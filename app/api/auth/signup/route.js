@@ -4,7 +4,7 @@ import connectDB from "@/lib/db";
 
 export async function POST(req) {
     try {
-        await connectDB(); // Ensure DB is connected
+        await connectDB(); 
 
         const { name, email, password } = await req.json();
 

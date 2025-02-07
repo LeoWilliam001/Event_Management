@@ -31,7 +31,6 @@ export default function SignupPage() {
             localStorage.setItem("token", data.token);
             router.push("/events"); // Redirect to events page after signup
         } else {
-            // Show the error message
             setError(data.message || "Signup failed");
         }
     };
@@ -39,7 +38,7 @@ export default function SignupPage() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">
             <h1 className="text-3xl text-white font-bold mb-6">Signup</h1>
-            {error && <p className="text-red-500">{error}</p>}  {/* Display error messages */}
+            {error && <p className="text-red-500">{error}</p>} 
 
             <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-80">
                 <input 

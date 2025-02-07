@@ -3,7 +3,7 @@ import connectDB from "@/lib/db";
 import Event from "@/models/eventModel";
 
 export async function DELETE(req, { params }) {
-    await connectDB(); // Ensure DB is connected
+    await connectDB(); 
 
     const { eventId } = await params;
 

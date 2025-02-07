@@ -1,7 +1,7 @@
-import connectDB from "@/lib/db"; // Import database connection
+import connectDB from "@/lib/db"; 
 import { NextResponse } from "next/server";
 
-connectDB(); // Connect to MongoDB once
+connectDB(); 
 
 export async function GET() {
     return NextResponse.json({ message: "Auth API is working" });

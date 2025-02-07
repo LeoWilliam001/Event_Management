@@ -5,7 +5,7 @@ const eventSchema = new mongoose.Schema({
     description: String,
     date: Date,
     attendees: { type: Number, default: 0 },
-    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true } // Add createdBy field
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true } 
 });
 
 const Event = mongoose.models.Event || mongoose.model("Event", eventSchema);
