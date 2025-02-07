@@ -78,8 +78,7 @@ An **Event Management Application** built with [Next.js](https://nextjs.org), [R
         "_id": "application_id",
         "__v": 0
     }
-}
-```  
+}```  
 
 ## 🔧 Usage  
 
