@@ -53,18 +53,31 @@ An **Event Management Application** built with [Next.js](https://nextjs.org), [R
 ### 🔹 Apply for an Event  
 **Endpoint:** `POST /api/events/apply`  
 
-**Request Body:**  
+**Request Body:** 
 ```json
 {
     "eventId": "event_id",
-    "userId": "user_id"
-}
-```  
+    "userId": "user_id",
+    "userName": "user_name",
+    "userEmail": "user_email",
+    "userPhone": "user_phone",
+    "userComment": "user_comment"
+}```
 
 **Response:**  
 ```json
 {
-    "message": "Application successful"
+    "message": "Application successful",
+    "application": {
+        "eventId": "event_id",
+        "userId": "user_id",
+        "userName": "user_name",
+        "userEmail": "user_email",
+        "userPhone": "user_phone",
+        "userComment": "user_comment",
+        "_id": "application_id",
+        "__v": 0
+    }
 }
 ```  
 
