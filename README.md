@@ -1,6 +1,7 @@
 # Event Management Application  
 
-An **Event Management Application** built with [Next.js](https://nextjs.org), [React](https://reactjs.org), and [Tailwind CSS](https://tailwindcss.com). Users can create, view, apply for, and manage events with authentication-based access control.  
+An **Event Management Application** built with [Next.js](https://nextjs.org), [React](https://reactjs.org), [Tailwind CSS](https://tailwindcss.com), and [MongoDB](https://www.mongodb.com). Users can create, view, apply for, delete and manage events with authentication-based access control.
+
 
 ## 🚀 Features  
 
