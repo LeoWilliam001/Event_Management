@@ -46,7 +46,11 @@ An **Event Management Application** built with [Next.js](https://nextjs.org), [R
    yarn dev
    ```  
 
-5. Open **[http://localhost:3000](http://localhost:3000)** in your browser.  
+5. Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+6. As an alternative the application is hosted on vercel **[https://event-manager-six-nu.vercel.app/](https://event-manager-six-nu.vercel.app/)**. So you can click on it and use it.
+
+7. First click on Signup and then login to your registered email and password and access the event management platform. You can also logout to end the session. 
   
 
 ## 📌 API Endpoints  
