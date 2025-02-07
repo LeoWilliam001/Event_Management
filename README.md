@@ -53,7 +53,7 @@ An **Event Management Application** built with [Next.js](https://nextjs.org), [R
 ### 🔹 Apply for an Event  
 **Endpoint:** `POST /api/events/apply`  
 
-**Request Body:** 
+**Request Body:**  
 ```json
 {
     "eventId": "event_id",
@@ -62,7 +62,8 @@ An **Event Management Application** built with [Next.js](https://nextjs.org), [R
     "userEmail": "user_email",
     "userPhone": "user_phone",
     "userComment": "user_comment"
-}```
+}
+```
 
 **Response:**  
 ```json
@@ -78,7 +79,8 @@ An **Event Management Application** built with [Next.js](https://nextjs.org), [R
         "_id": "application_id",
         "__v": 0
     }
-}```  
+}
+```  
 
 ## 🔧 Usage  
 
